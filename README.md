@@ -36,21 +36,49 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+
+
+ 1.Create module with 8 inputs and 3 outputs.
+
+
+ 
+
+2.Use dataflow (assign statements) to describe output equations.
+
+
+
+
+
+3.Write logic equations for Y2, Y1, Y0 using OR operations.
+
+
+
+
+
+
+4.End the module.
 
 **PROGRAM**
 
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
-*/
+```
+module enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+ output a,b,c; assign a= ( y4 | y5 | y6 | y7);
+ assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
+ endmodule
+```
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+<img width="1161" height="766" alt="Screenshot 2025-12-15 125344" src="https://github.com/user-attachments/assets/d6c5362b-749d-462c-9438-b5282252a2cf" />
 
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+<img width="1009" height="529" alt="Screenshot 2025-12-15 125355" src="https://github.com/user-attachments/assets/193686d4-51d1-4a71-9438-1fd1e89175b2" />
 
 **RESULTS**
-
+Thus the 8 to 3 encoder is designed and the truth table is verified using Quartus software.
 
 
 
